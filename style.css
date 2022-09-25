@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     
-    background-image: radial-gradient(circle, rgba(41, 18, 18, 0.587) 50%, rgba(0, 0, 0, 0.683) 85%), url(/imagenes/hawaii.jpg);
+    background-image: radial-gradient(circle, rgba(41, 18, 18, 0.587) 50%, rgba(0, 0, 0, 0.683) 85%), url(./imagenes/hawaii.jpg);
     background-size: 100vw;
     background-repeat: no-repeat;
 
