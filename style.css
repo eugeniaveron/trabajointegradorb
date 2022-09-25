@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.contenedor{
+    background-color: black;
+}
+.navbar {
+    background-color: #353a40;
+}
+
+.caja1{
+    
+    width: 100vw;
+    height: 50vw;
+    display: flex;
+    align-items: center;
+    
+    background-image: radial-gradient(circle, rgba(41, 18, 18, 0.587) 50%, rgba(0, 0, 0, 0.683) 85%), url(/imagenes/hawaii.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+
+}
+.caja1 .texto1 {
+    text-align: left;
+    margin-left: 50%;
+    margin-top: 20%;    
+}
+.caja1 .texto1 p {
+    line-height: 8px;
+    
+}
+
+.oradores .texto2 {
+    line-height: 8px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card-octubre{
+    background-color: #353a40;
+}
+
+.btn-enviar{
+    background-color: #96c93e;
+    border-color: #96c93e;
+}
+.formulario p{
+    font-size: x-small;
+    color: #6e757d;
+}
+.formulario{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.footer{
+    background: rgb(30,83,114);
+background: linear-gradient(311deg, rgba(30,83,114,1) 70%, rgba(2,0,36,1) 100%);
+}
+
+.footer a{
+    font-size: small;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
+    text-align: center;
+    text-decoration:none;
+    
+}
+
