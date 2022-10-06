@@ -2,23 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 .contenedor{
     background-color: black;
 }
-.navbar {
+.navbar  {
     background-color: #353a40;
+    z-index: 1000;
+    
+    
+}
+.navbar .container img{
+    width: 100px;
+}
+.texto1{
+    bottom: 20px;
+    z-index: 10;
 }
 
+#carouselExampleSlidesOnly .carousel-item:before{
+    content: '';
+    background-image: linear-gradient( transparent, rgba(0, 0, 0, 0.831)100%);
+    display: block;
+    position: absolute; 
+    width: 100%;
+    height: 100%;   
+}
 .caja1{
     
     width: 100vw;
     height: 50vw;
     display: flex;
     align-items: center;
-    
-    background-image: radial-gradient(circle, rgba(41, 18, 18, 0.587) 50%, rgba(0, 0, 0, 0.683) 85%), url(./imagenes/hawaii.jpg);
+    position: absolute;
+    z-index: 10;
+    bottom:20px;    
     background-size: 100vw;
     background-repeat: no-repeat;
 
@@ -39,6 +57,15 @@
     padding: 1rem;
 }
 
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+    gap: 1%;
+    
+}
+
 .card-octubre{
     background-color: #353a40;
 }
@@ -46,27 +73,202 @@
 .btn-enviar{
     background-color: #96c93e;
     border-color: #96c93e;
+    box-shadow: none;
+    outline: none;
 }
 .formulario p{
-    font-size: x-small;
+    font-size: 13px;
     color: #6e757d;
 }
+
 .formulario{
     margin-left: 20%;
     margin-right: 20%;
 }
 .footer{
     background: rgb(30,83,114);
-background: linear-gradient(311deg, rgba(30,83,114,1) 70%, rgba(2,0,36,1) 100%);
+    background: linear-gradient(311deg, rgba(30,83,114,1) 70%, rgba(2,0,36,1) 100%);
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
 }
 
-.footer a{
-    font-size: small;
-    margin-left: 5%;
-    margin-right: 5%;
+.footer li a{
+    font-size: small;   
     align-items: center;
     text-align: center;
-    text-decoration:none;
-    
+    text-decoration:none;    
+}
+.footer li {
+    list-style: none;
 }
 
+@media screen and (max-width: 400px) {
+    .navbar{
+        
+        align-items: center;
+    }
+    .navbar .container img {
+        width: 50px;
+        
+    }
+    .navbar .container .navbar-brand{
+        font-size: small;
+        font-weight: 500;
+        height: 40px;
+        display: flex;
+        align-content: center;
+        align-self: center;
+        padding-top: 3%;
+    }
+
+    .carousel{
+        margin-top: 5%;
+        width: auto;
+        height: auto;
+    }
+    .caja1{
+        display: grid;
+        justify-items: end;
+        margin-bottom: 5%;
+        padding-right: 2%;      
+    }
+    .caja1 h1{
+        font-size: small;
+    }
+    
+    .caja1 .texto1 p { 
+        display: none;   
+    }
+    .caja1 .texto1 .btn{
+        font-size: 10px;
+        margin-bottom: 5px;
+        width: 150px;
+        padding: 2px;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 3%;
+    }
+    .oradores .texto2 .parrafo{
+        line-height: 25px;
+    }
+    .footer{
+        flex-direction: column;       
+    }    
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 767px) {
+    .navbar{
+        
+        align-items: center;
+    }
+    .navbar .container img {
+        width: 50px;
+        
+    }
+    .navbar .container .navbar-brand{
+        font-size: small;
+        font-weight: 500;
+        height: 40px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        align-self: center;        
+    }
+    
+    .carousel{
+        margin-top: 5%;
+        width: auto;
+        height: auto;
+    }
+    .caja1{
+        display: grid;
+        justify-items: end;
+        margin-bottom: 5%;
+        
+    }
+    .caja1 h1{
+        font-size: small;
+    }
+    .caja1 .texto1 {
+        text-align: left;
+        margin-right: 5%; 
+        margin-left: 0%;
+        font-size: x-small;           
+    }
+    .caja1 .texto1 p {
+        line-height: 0px;    
+    }
+    .caja1 .texto1 .btn{
+        font-size: 10px;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .oradores .texto2 .parrafo{
+        line-height: 25px;
+    }
+    .footer{
+        flex-direction: column;       
+    }   
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .navbar .container .navbar-brand{
+        font-size: medium;
+        font-weight: 500;
+    }
+    .carousel{
+        margin-top: 5%;
+    }
+    .caja1{
+        display: grid;
+        justify-items: end;
+        margin-bottom: 5%;       
+    }
+    .caja1 h1{
+        font-size: small;
+    }
+    .caja1 .texto1 {
+        text-align: left;
+        margin-right: 5%; 
+        margin-left: 0%;
+        font-size: x-small;           
+    }
+    .caja1 .texto1 p {
+        line-height: 0.5px; 
+        font-size: small;   
+    }
+    .caja1 .texto1 .btn{
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px;
+    }
+    .card .card-body .card-title {
+        font-size: 18px;
+        margin-bottom: 0%;
+    }
+    .card .card-body p{
+        font-size: 13px;
+        margin-bottom: 0%;
+    }
+    .card .card-body .btn{
+        font-size: 13px;
+        margin-top: 4px;
+        padding: 5px;
+    }
+}
